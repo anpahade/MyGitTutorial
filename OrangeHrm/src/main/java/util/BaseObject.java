@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BaseSolvent {
+public class BaseObject {
 
 	protected static final long PAGE_LOAD_TIMEOUT = BaseTestCase.getPageLoadTimeout();
 

@@ -76,7 +76,7 @@ public class BaseTestCase {
 	}
 
 	public void waitForContent() {
-		BaseSolvent.waitForContent();
+		BaseObject.waitForContent();
 	}
 
 }
