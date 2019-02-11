@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11593" started-at="2019-02-11T07:01:28Z" finished-at="2019-02-11T07:01:40Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11593" started-at="2019-02-11T07:01:28Z" finished-at="2019-02-11T07:01:40Z">
+      <class name="ValidateSuccessfulLogin">
+        <test-method status="PASS" signature="testClassSetup()[pri:0, instance:ValidateSuccessfulLogin@15530b9]" name="testClassSetup" is-config="true" duration-ms="3603" started-at="2019-02-11T07:01:28Z" finished-at="2019-02-11T07:01:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClassSetup -->
+        <test-method status="PASS" signature="Can_Successful_Login()[pri:0, instance:ValidateSuccessfulLogin@15530b9]" name="Can_Successful_Login" duration-ms="7386" started-at="2019-02-11T07:01:32Z" finished-at="2019-02-11T07:01:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Can_Successful_Login -->
+        <test-method status="PASS" signature="testClassTearDown()[pri:0, instance:ValidateSuccessfulLogin@15530b9]" name="testClassTearDown" is-config="true" duration-ms="588" started-at="2019-02-11T07:01:39Z" finished-at="2019-02-11T07:01:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClassTearDown -->
+      </class> <!-- ValidateSuccessfulLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
