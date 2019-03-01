@@ -1,6 +1,5 @@
 package core;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -9,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.remote.CapabilityType;
-
 
 public class Driver {
 
@@ -34,11 +32,15 @@ public class Driver {
 		defaultUser = props.getDefaultUser();
 		defaultPassword = props.getDefaultPassword();
 		driverTypeName = props.getDriverType();
-		pageLoadTimeout=props.getPageLoadTimeOut();
+		pageLoadTimeout = props.getPageLoadTimeOut();
 	}
 
 	public void startDriver() {
 		driver = newWebDriver();
+	}
+
+	public boolean isRunning() {
+		return driver != null;
 	}
 
 	public void tearDown() {
@@ -105,7 +107,7 @@ public class Driver {
 	public DriverType getDriverType() {
 		return driverType;
 	}
-	
+
 	public long getPageLoadTimeout() {
 		return pageLoadTimeout;
 	}

@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+  <test name="Test">
     <classes>
-      <class name=".ValidateQuickLaunch"/>
-      <class name=".ValidateSuccessfulLogin"/>
-      <class name="core.Driver"/>
-      <class name="core.DriverType"/>
+      <class name="ValidateQuickLaunch"/>
+      <class name="ValidateSuccessfulLogin"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,5 +1,8 @@
 package util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -9,8 +12,9 @@ import core.Driver.DriverType;
 import core.OrangeHrmProperties;
 import pages.LoginPageObject;
 
-public class BaseTestCase {
+public abstract class BaseTestCase {
 
+	private static List<Driver> sessions;
 	private static Driver currentSession;
 	protected static volatile OrangeHrmProperties props;
 
@@ -20,12 +24,22 @@ public class BaseTestCase {
 
 	@BeforeClass
 	public static void testClassSetup() {
-		if (props == null) {
-			props = new OrangeHrmProperties();
+		synchronized (new Object()) {
+			if (props == null) {
+				props = new OrangeHrmProperties();
+			}
+			// Load the properties
+			props.UitestFileReader();
+			currentSession = createNewSession(props);
+
 		}
-		// Load the properties
-		props.UitestFileReader();
-		currentSession = createNewSession(props);
+	}
+
+	public static void switchToSession(Driver session) {
+		int index = sessions.indexOf(session);
+		if (index >= 0) {
+			currentSession = sessions.get(index);
+		}
 	}
 
 	@AfterClass
