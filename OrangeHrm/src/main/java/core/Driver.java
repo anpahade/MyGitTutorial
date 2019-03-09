@@ -68,7 +68,6 @@ public class Driver {
 				ChromeOptions options = new ChromeOptions();
 				options.setAcceptInsecureCerts(true);
 				options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-
 				driver = new ChromeDriver(options);
 				driverType = DriverType.CHROME;
 
